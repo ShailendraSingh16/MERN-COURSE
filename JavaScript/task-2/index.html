@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi-Page Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .page {
+      display: none;
+      margin: 20px auto;
+      max-width: 400px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .page h1 {
+      margin-top: 0;
+    }
+
+    .navigation {
+      margin-top: 20px;
+    }
+
+    .navigation a,
+    .navigation button {
+      display: inline-block;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      background-color: #4caf50;
+      color: #fff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="page1" class="page">
+    <h1>Page 1</h1>
+    <p>This is Page 1</p>
+    <div class="navigation">
+      <a href="#" onclick="navigateToPage(2)">Next</a>
+    </div>
+  </div>
+
+  <div id="page2" class="page">
+    <h1>Page 2</h1>
+    <p>This is Page 2</p>
+    <div class="navigation">
+      <a href="#" onclick="navigateToPage(1)">Previous</a>
+      <button onclick="navigateToPage(3)">Next</button>
+    </div>
+  </div>
+
+  <div id="page3" class="page">
+    <h1>Page 3</h1>
+    <p>This is Page 3</p>
+    <div class="navigation">
+      <a href="#" onclick="navigateToPage(2)">Previous</a>
+    </div>
+  </div>
+
+  <script>
+    let currentPage = 1;
+
+    function navigateToPage(pageNumber) {
+      document.getElementById('page' + currentPage).style.display = 'none';
+      document.getElementById('page' + pageNumber).style.display = 'block';
+      currentPage = pageNumber;
+    }
+  </script>
+</body>
+</html>
