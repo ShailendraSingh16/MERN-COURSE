@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animation</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin: 20px auto;
+      transition: transform 1s ease-in-out;
+    }
+
+    .animate {
+      animation: moveBox 2s infinite alternate;
+    }
+
+    @keyframes moveBox {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(200px);
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Animation</h1>
+    <div class="box" id="box"></div>
+    <br>
+    <button onclick="startAnimation()">Start</button>
+    <button onclick="stopAnimation()">Stop</button>
+  </div>
+
+  <script>
+    let animationInterval;
+
+    function startAnimation() {
+      const box = document.getElementById('box');
+      box.classList.add('animate');
+      animationInterval = setInterval(moveBox, 2000);
+    }
+
+    function moveBox() {
+      const box = document.getElementById('box');
+      box.style.transform = `translateX(${parseInt(box.style.transform || '0px') + 200}px)`;
+    }
+
+    function stopAnimation() {
+      const box = document.getElementById('box');
+      box.classList.remove('animate');
+      clearInterval(animationInterval);
+    }
+  </script>
+</body>
+</html>
