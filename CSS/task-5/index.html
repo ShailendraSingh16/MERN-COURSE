@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Horizontal Navigation Bar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 60px; /* Adjust height as needed */
+    }
+
+    .nav-item {
+      padding: 10px 20px;
+      color: #333;
+      text-decoration: none;
+      background-color: #ddd;
+      transition: background-color 0.3s;
+    }
+
+    .nav-item:first-child {
+      background-color: #888;
+      color: #fff;
+    }
+
+    .nav-item:hover {
+      background-color: #ccc;
+    }
+
+    .content {
+      padding: 20px;
+      background-color: #888;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="#" class="nav-item">Home</a>
+    <a href="#" class="nav-item">Java</a>
+    <a href="#" class="nav-item">HTML</a>
+    <a href="#" class="nav-item">CSS</a>
+  </div>
+
+  <div class="content">
+   <p>Horizontal Navigation Bar</p>
+  </div>
+</body>
+</html>
