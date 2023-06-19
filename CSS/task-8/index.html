@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shapes with Light Green Boundary</title>
+  <style>
+    .shape {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+      border: 2px solid lightgreen;
+      display: inline-block;
+    }
+
+    .circle {
+      border-radius: 50%;
+      background-color: #e0f3e0;
+    }
+
+    .square {
+      background-color: #b6e9b6;
+    }
+
+    .triangle {
+      width: 0;
+      height: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 200px solid #91d991;
+    }
+
+    .pentagon {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      background-color: #66c266;
+      transform: rotate(36deg);
+    }
+
+    .pentagon:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      border-bottom: 120px solid #66c266;
+      top: -90px;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="shape circle"></div>
+  <div class="shape square"></div>
+  <div class="shape triangle"></div>
+  <div class="shape pentagon"></div>
+</body>
+</html>
