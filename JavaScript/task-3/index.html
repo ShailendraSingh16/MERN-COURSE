@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .form-container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    .form-container h1 {
+      margin-top: 0;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      text-align: left;
+      font-weight: bold;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    .form-group .error-message {
+      color: red;
+      margin-top: 5px;
+      text-align: left;
+    }
+
+    .submit-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      background-color: #4caf50;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Contact Us</h1>
+    <form id="contactForm" onsubmit="return validateForm()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <span id="nameError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <span id="emailError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="website">Website:</label>
+        <input type="text" id="website" name="website">
+        <span id="websiteError" class="error-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        <span id="messageError" class="error-message"></span>
+      </div>
+
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      // Get form inputs
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const websiteInput = document.getElementById('website');
+      const messageInput = document.getElementById('message');
+
+      // Get error message elements
+      const nameError = document.getElementById('nameError');
+      const emailError = document.getElementById('emailError');
+      const websiteError = document.getElementById('websiteError');
+      const messageError = document.getElementById('messageError');
+
+      // Reset
