@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Iframes Demo</title>
+  <style>
+    .iframe-container {
+      width: 400px;
+      height: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML Iframes Demo</h1>
+
+  <h2>Example 1: iframe without border</h2>
+  <div class="iframe-container">
+    <iframe src="https://www.example.com"></iframe>
+  </div>
+
+  <h2>Example 2: iframe with border and additional CSS properties</h2>
+  <div class="iframe-container" style="border: 2px dashed #ff0000; border-radius: 10px;">
+    <iframe src="https://www.example.com"></iframe>
+  </div>
+</body>
+</html>
