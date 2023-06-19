@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <form action="submit-form.php" method="POST">
+    <label for="first-name">First Name:</label>
+    <input type="text" id="first-name" name="first-name" required>
+    <br><br>
+    
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="last-name" name="last-name" required>
+    <br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+    
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <br><br>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+    <br><br>
+    
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+    <br><br>
+    
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" cols="30" required></textarea>
+    <br><br>
+    
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required>
+    <br><br>
+    
+    <label for="country">Country:</label>
+    <select id="country" name="country" required>
+      <option value="India">USA</option>
+      <option value="Canada">Canada</option>
+      <option value="UK">UK</option>
+
+    </select>
+    <br><br>
+    
+    <label>Languages:</label>
+    <input type="checkbox" id="english" name="language" value="english">
+    <label for="english">English</label>
+    <input type="checkbox" id="spanish" name="language" value="spanish">
+    <label for="spanish">Hindi</label>
+    <input type="checkbox" id="french" name="language" value="french">
+    <label for="french">French</label>
+    <br><br>
+    
+    <input type="checkbox" id="declaration" required>
+    <label for="declaration">Hereby I declare that all the given details are true.</label>
+    <br><br>
+    
+    <input type="submit" value="Register">
+  </form>
+</body>
+</html>
